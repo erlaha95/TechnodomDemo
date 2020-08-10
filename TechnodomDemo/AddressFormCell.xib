@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressFormCell" rowHeight="190" id="KGk-i7-Jjw" customClass="AddressFormCell" customModule="TechnodomDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="190"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJB-Mj-SPF">
+                        <rect key="frame" x="0.0" y="0.0" width="485" height="190"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Город" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xne-NS-9Ge">
+                                <rect key="frame" x="16" y="16" width="453" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="D36-9F-DKI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Адрес" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBK-YQ-rdx">
+                                <rect key="frame" x="16" y="68" width="365" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="YKn-QK-xnj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Кв." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4D-SJ-Rah">
+                                <rect key="frame" x="389" y="68" width="80" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="0sS-lt-3b8"/>
+                                    <constraint firstAttribute="height" constant="44" id="A4a-yf-wLe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTy-tI-DBV">
+                                <rect key="frame" x="16" y="128" width="453" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="yxr-Kc-dEN"/>
+                                </constraints>
+                                <state key="normal" title="Добавить">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zTy-tI-DBV" firstAttribute="leading" secondItem="RJB-Mj-SPF" secondAttribute="leading" constant="16" id="02a-CZ-nAR"/>
+                            <constraint firstItem="QBK-YQ-rdx" firstAttribute="top" secondItem="Xne-NS-9Ge" secondAttribute="bottom" constant="8" id="295-4x-gOF"/>
+                            <constraint firstItem="zTy-tI-DBV" firstAttribute="top" secondItem="QBK-YQ-rdx" secondAttribute="bottom" constant="16" id="Fa6-UN-ebA"/>
+                            <constraint firstAttribute="trailing" secondItem="Xne-NS-9Ge" secondAttribute="trailing" constant="16" id="Ie1-Wd-ceT"/>
+                            <constraint firstItem="t4D-SJ-Rah" firstAttribute="top" secondItem="Xne-NS-9Ge" secondAttribute="bottom" constant="8" id="M46-w5-aOs"/>
+                            <constraint firstAttribute="trailing" secondItem="t4D-SJ-Rah" secondAttribute="trailing" constant="16" id="Ogc-2I-F0R"/>
+                            <constraint firstItem="QBK-YQ-rdx" firstAttribute="leading" secondItem="RJB-Mj-SPF" secondAttribute="leading" constant="16" id="Qkx-GD-yE0"/>
+                            <constraint firstItem="t4D-SJ-Rah" firstAttribute="leading" secondItem="QBK-YQ-rdx" secondAttribute="trailing" constant="8" id="R4X-Qc-7pe"/>
+                            <constraint firstAttribute="trailing" secondItem="zTy-tI-DBV" secondAttribute="trailing" constant="16" id="ZCW-ob-TWK"/>
+                            <constraint firstItem="Xne-NS-9Ge" firstAttribute="leading" secondItem="RJB-Mj-SPF" secondAttribute="leading" constant="16" id="gJq-3R-hrB"/>
+                            <constraint firstItem="Xne-NS-9Ge" firstAttribute="top" secondItem="RJB-Mj-SPF" secondAttribute="top" constant="16" id="pYC-FU-X8V"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="RJB-Mj-SPF" secondAttribute="bottom" id="Ibs-Vm-lIq"/>
+                    <constraint firstItem="RJB-Mj-SPF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Yzc-8g-riT"/>
+                    <constraint firstAttribute="trailing" secondItem="RJB-Mj-SPF" secondAttribute="trailing" id="dx0-He-hB1"/>
+                    <constraint firstItem="RJB-Mj-SPF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="grE-3T-mwD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="258.69565217391306" y="199.55357142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
