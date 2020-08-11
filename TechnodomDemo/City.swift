@@ -6,4 +6,17 @@
 //  Copyright © 2020 ismailov.kz. All rights reserved.
 //
 
-import Foundation
+struct City {
+    
+    public let name: String
+    private var addresses = [Address]()
+    
+    init(name: String, addresses: [Address] = []) {
+        self.name = name
+        self.addresses = addresses
+    }
+    
+    mutating func add(address: Address) {
+        addresses.append(address)
+    }
+}

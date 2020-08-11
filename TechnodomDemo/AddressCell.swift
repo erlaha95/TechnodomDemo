@@ -10,4 +10,8 @@ import UIKit
 
 class AddressCell: UICollectionViewCell {
     @IBOutlet weak var addressLabel: UILabel!
+    
+    func configureCell(with address: String) {
+        addressLabel.text = address
+    }
 }

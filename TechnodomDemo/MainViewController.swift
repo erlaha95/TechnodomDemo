@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    enum Section: Int {
+    enum Section: Int, CaseIterable {
         case list
         case form
         
@@ -30,6 +30,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupCollectionView()
+        mainCollectionView.reloadData()
+    }
+    
+    func setupCollectionView() {
         let nib = UINib(nibName: "AddressFormCell", bundle: Bundle.main)
         mainCollectionView.register(nib, forCellWithReuseIdentifier: "AddressFormCell")
         
@@ -37,8 +42,6 @@ class MainViewController: UIViewController {
         mainCollectionView.dataSource = self
         mainCollectionView.collectionViewLayout = layout
         layout.itemSize = CGSize(width: 120, height: 120)
-        
-        mainCollectionView.reloadData()
     }
 }
 
@@ -75,8 +78,23 @@ extension MainViewController: UICollectionViewDataSource {
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard indexPath.section == 0 else { return UICollectionReusableView() }
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let headerView = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: "CollectionHeaderView",
+                for: indexPath
+            ) as! CollectionHeaderView
+            return headerView
+        default:
+            return UICollectionReusableView()
+        }
+    }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return Section.allCases.count
     }
 }
 
@@ -89,7 +107,8 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 100)
+        guard section == 0 else { return .zero }
+        return CGSize(width: collectionView.frame.width, height: 85)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

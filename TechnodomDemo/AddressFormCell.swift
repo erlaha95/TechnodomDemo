@@ -18,7 +18,6 @@ class AddressFormCell: UICollectionViewCell {
             addButton.layer.cornerRadius = Constants.UI.defaultCornerRadius
         }
     }
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()

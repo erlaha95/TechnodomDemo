@@ -22,13 +22,13 @@
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OdV-eg-rdG">
                                     <size key="itemSize" width="165" height="110"/>
-                                    <size key="headerReferenceSize" width="50" height="70"/>
+                                    <size key="headerReferenceSize" width="50" height="85"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddressCell" id="SdM-97-x08" customClass="AddressCell" customModule="TechnodomDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="165" height="110"/>
+                                        <rect key="frame" x="0.0" y="85" width="165" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZV5-sn-rv1">
                                             <rect key="frame" x="0.0" y="0.0" width="165" height="110"/>
@@ -56,12 +56,12 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="h4j-gL-n1g">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionHeaderView" id="h4j-gL-n1g" customClass="CollectionHeaderView" customModule="TechnodomDemo" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8L8-x8-SoX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8L8-x8-SoX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
                                             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mak-M7-VgO">
                                                 <size key="itemSize" width="128" height="89"/>
@@ -70,39 +70,57 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ydm-Ej-caS" customClass="AddressCell" customModule="TechnodomDemo" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="-9.5" width="128" height="89"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yRz-Gh-gpI">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CityCell" id="dTk-cf-c9D" customClass="CityCell" customModule="TechnodomDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="-10" width="128" height="89"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nmR-Cg-I0m">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="89"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mii-wk-cnw">
-                                                                <rect key="frame" x="43" y="33.5" width="42" height="21"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnV-Sh-79R">
+                                                                <rect key="frame" x="-56" y="-20" width="240" height="128"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07O-2l-orO">
+                                                                        <rect key="frame" x="99" y="53" width="42" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="07O-2l-orO" secondAttribute="trailing" constant="16" id="IFv-tH-DKZ"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="07O-2l-orO" secondAttribute="bottom" constant="8" id="NPV-px-Tn6"/>
+                                                                    <constraint firstItem="07O-2l-orO" firstAttribute="leading" secondItem="qnV-Sh-79R" secondAttribute="leading" constant="16" id="RGC-Op-Nqv"/>
+                                                                    <constraint firstItem="07O-2l-orO" firstAttribute="top" secondItem="qnV-Sh-79R" secondAttribute="top" constant="8" id="x8L-r2-oya"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="mii-wk-cnw" firstAttribute="leading" secondItem="yRz-Gh-gpI" secondAttribute="leading" constant="8" id="4bn-Sz-8ZU"/>
-                                                            <constraint firstAttribute="trailing" secondItem="mii-wk-cnw" secondAttribute="trailing" constant="8" id="5o5-Dl-NOG"/>
-                                                            <constraint firstAttribute="bottom" secondItem="mii-wk-cnw" secondAttribute="bottom" constant="8" id="IMa-ha-lEp"/>
-                                                            <constraint firstItem="mii-wk-cnw" firstAttribute="top" secondItem="yRz-Gh-gpI" secondAttribute="top" constant="8" id="KlH-Cd-aZb"/>
+                                                            <constraint firstItem="qnV-Sh-79R" firstAttribute="top" secondItem="nmR-Cg-I0m" secondAttribute="top" constant="8" id="88A-aZ-G50"/>
+                                                            <constraint firstAttribute="trailing" secondItem="qnV-Sh-79R" secondAttribute="trailing" constant="8" id="Wln-IQ-jTn"/>
+                                                            <constraint firstAttribute="bottom" secondItem="qnV-Sh-79R" secondAttribute="bottom" constant="8" id="lWM-5y-hWc"/>
+                                                            <constraint firstItem="qnV-Sh-79R" firstAttribute="leading" secondItem="nmR-Cg-I0m" secondAttribute="leading" constant="8" id="lhR-Z4-pjU"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
                                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <size key="customSize" width="128" height="89"/>
+                                                    <connections>
+                                                        <outlet property="cityNameLabel" destination="07O-2l-orO" id="VHH-Ke-pwQ"/>
+                                                        <outlet property="containerView" destination="qnV-Sh-79R" id="p6k-52-Z7A"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="8L8-x8-SoX" firstAttribute="top" secondItem="h4j-gL-n1g" secondAttribute="top" id="0bu-yl-7TB"/>
-                                        <constraint firstAttribute="bottom" secondItem="8L8-x8-SoX" secondAttribute="bottom" id="5Xw-Md-rmF"/>
+                                        <constraint firstAttribute="bottom" secondItem="8L8-x8-SoX" secondAttribute="bottom" constant="16" id="5Xw-Md-rmF"/>
                                         <constraint firstItem="8L8-x8-SoX" firstAttribute="leading" secondItem="h4j-gL-n1g" secondAttribute="leading" id="LZo-Vq-lcr"/>
                                         <constraint firstAttribute="trailing" secondItem="8L8-x8-SoX" secondAttribute="trailing" id="uwd-sy-ujB"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="collectionView" destination="8L8-x8-SoX" id="bEC-Oh-MiZ"/>
+                                    </connections>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
