@@ -3,16 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62593693E88953A6A9A5AA70 /* Pods_TechnodomDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9A67D5AA72681E1D9E49AF /* Pods_TechnodomDemo.framework */; };
+		A803AB2CCAF042ACC14F060E /* Pods_TechnodomDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B6BAD954C297A38894B11A /* Pods_TechnodomDemoTests.framework */; };
 		E079AD8624E1588000C360AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079AD8524E1588000C360AF /* AppDelegate.swift */; };
 		E079AD8F24E1588300C360AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E079AD8E24E1588300C360AF /* Assets.xcassets */; };
 		E079AD9224E1588300C360AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E079AD9024E1588300C360AF /* LaunchScreen.storyboard */; };
 		E079AD9D24E1588300C360AF /* TechnodomDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079AD9C24E1588300C360AF /* TechnodomDemoTests.swift */; };
 		E079ADAA24E1596100C360AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADA924E1596100C360AF /* Constants.swift */; };
-		E079ADAD24E15BEC00C360AF /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = E079ADAC24E15BEC00C360AF /* Fakery */; };
 		E079ADAF24E166BB00C360AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E079ADAE24E166BB00C360AF /* Main.storyboard */; };
 		E079ADB424E16CF600C360AF /* AddressFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADB224E16CF600C360AF /* AddressFormCell.swift */; };
 		E079ADB524E16CF600C360AF /* AddressFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E079ADB324E16CF600C360AF /* AddressFormCell.xib */; };
@@ -22,6 +23,8 @@
 		E079ADBF24E1854B00C360AF /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADBE24E1854B00C360AF /* Address.swift */; };
 		E079ADC124E1863600C360AF /* AddressRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADC024E1863600C360AF /* AddressRepresentable.swift */; };
 		E079ADC524E18A2500C360AF /* AddressGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADC424E18A2500C360AF /* AddressGenerator.swift */; };
+		E0A1CEA624E2AA7B0018F28E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */; };
+		E0A1CEA824E2BD1D0018F28E /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEA724E2BD1D0018F28E /* CityCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CD33DA346991ABD7B612D04 /* Pods-TechnodomDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnodomDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-TechnodomDemoTests/Pods-TechnodomDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F9A67D5AA72681E1D9E49AF /* Pods_TechnodomDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechnodomDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BDE5FFD5782BBF3C70D4E61 /* Pods-TechnodomDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnodomDemoTests.release.xcconfig"; path = "Target Support Files/Pods-TechnodomDemoTests/Pods-TechnodomDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		C0B6BAD954C297A38894B11A /* Pods_TechnodomDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechnodomDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C69AC30CC79BFB315C6D080B /* Pods-TechnodomDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnodomDemo.debug.xcconfig"; path = "Target Support Files/Pods-TechnodomDemo/Pods-TechnodomDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E079AD8224E1588000C360AF /* TechnodomDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechnodomDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E079AD8524E1588000C360AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E079AD8E24E1588300C360AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +61,9 @@
 		E079ADBE24E1854B00C360AF /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		E079ADC024E1863600C360AF /* AddressRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRepresentable.swift; sourceTree = "<group>"; };
 		E079ADC424E18A2500C360AF /* AddressGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressGenerator.swift; sourceTree = "<group>"; };
+		E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		E0A1CEA724E2BD1D0018F28E /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		F242419DADC1E654C3FD1EC4 /* Pods-TechnodomDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnodomDemo.release.xcconfig"; path = "Target Support Files/Pods-TechnodomDemo/Pods-TechnodomDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E079ADAD24E15BEC00C360AF /* Fakery in Frameworks */,
+				62593693E88953A6A9A5AA70 /* Pods_TechnodomDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,18 +79,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A803AB2CCAF042ACC14F060E /* Pods_TechnodomDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F153DF021748229651C7BFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C69AC30CC79BFB315C6D080B /* Pods-TechnodomDemo.debug.xcconfig */,
+				F242419DADC1E654C3FD1EC4 /* Pods-TechnodomDemo.release.xcconfig */,
+				3CD33DA346991ABD7B612D04 /* Pods-TechnodomDemoTests.debug.xcconfig */,
+				8BDE5FFD5782BBF3C70D4E61 /* Pods-TechnodomDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5E7651404365989E8B52E778 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F9A67D5AA72681E1D9E49AF /* Pods_TechnodomDemo.framework */,
+				C0B6BAD954C297A38894B11A /* Pods_TechnodomDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E079AD7924E1588000C360AF = {
 			isa = PBXGroup;
 			children = (
 				E079AD8424E1588000C360AF /* TechnodomDemo */,
 				E079AD9B24E1588300C360AF /* TechnodomDemoTests */,
 				E079AD8324E1588000C360AF /* Products */,
+				3F153DF021748229651C7BFF /* Pods */,
+				5E7651404365989E8B52E778 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +144,8 @@
 				E079ADBE24E1854B00C360AF /* Address.swift */,
 				E079ADC024E1863600C360AF /* AddressRepresentable.swift */,
 				E079ADC424E18A2500C360AF /* AddressGenerator.swift */,
+				E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */,
+				E0A1CEA724E2BD1D0018F28E /* CityCell.swift */,
 			);
 			path = TechnodomDemo;
 			sourceTree = "<group>";
@@ -129,18 +166,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E079ADA124E1588300C360AF /* Build configuration list for PBXNativeTarget "TechnodomDemo" */;
 			buildPhases = (
+				A2D9D77EA761849591CCC9FB /* [CP] Check Pods Manifest.lock */,
 				E079AD7E24E1588000C360AF /* Sources */,
 				E079AD7F24E1588000C360AF /* Frameworks */,
 				E079AD8024E1588000C360AF /* Resources */,
+				1509C86F4993892E3D60CBEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TechnodomDemo;
-			packageProductDependencies = (
-				E079ADAC24E15BEC00C360AF /* Fakery */,
-			);
 			productName = TechnodomDemo;
 			productReference = E079AD8224E1588000C360AF /* TechnodomDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E079ADA424E1588300C360AF /* Build configuration list for PBXNativeTarget "TechnodomDemoTests" */;
 			buildPhases = (
+				806666B73AE19907BF3465EA /* [CP] Check Pods Manifest.lock */,
 				E079AD9424E1588300C360AF /* Sources */,
 				E079AD9524E1588300C360AF /* Frameworks */,
 				E079AD9624E1588300C360AF /* Resources */,
@@ -191,9 +228,6 @@
 				Base,
 			);
 			mainGroup = E079AD7924E1588000C360AF;
-			packageReferences = (
-				E079ADAB24E15BEC00C360AF /* XCRemoteSwiftPackageReference "Fakery" */,
-			);
 			productRefGroup = E079AD8324E1588000C360AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,13 +259,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1509C86F4993892E3D60CBEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechnodomDemo/Pods-TechnodomDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechnodomDemo/Pods-TechnodomDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TechnodomDemo/Pods-TechnodomDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		806666B73AE19907BF3465EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TechnodomDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2D9D77EA761849591CCC9FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TechnodomDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E079AD7E24E1588000C360AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E079AD8624E1588000C360AF /* AppDelegate.swift in Sources */,
+				E0A1CEA624E2AA7B0018F28E /* CollectionHeaderView.swift in Sources */,
 				E079ADB924E1834100C360AF /* AddressCell.swift in Sources */,
+				E0A1CEA824E2BD1D0018F28E /* CityCell.swift in Sources */,
 				E079ADAA24E1596100C360AF /* Constants.swift in Sources */,
 				E079ADB424E16CF600C360AF /* AddressFormCell.swift in Sources */,
 				E079ADC124E1863600C360AF /* AddressRepresentable.swift in Sources */,
@@ -388,6 +488,7 @@
 		};
 		E079ADA224E1588300C360AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69AC30CC79BFB315C6D080B /* Pods-TechnodomDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,6 +508,7 @@
 		};
 		E079ADA324E1588300C360AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F242419DADC1E654C3FD1EC4 /* Pods-TechnodomDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -426,6 +528,7 @@
 		};
 		E079ADA524E1588300C360AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CD33DA346991ABD7B612D04 /* Pods-TechnodomDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,6 +551,7 @@
 		};
 		E079ADA624E1588300C360AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BDE5FFD5782BBF3C70D4E61 /* Pods-TechnodomDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -499,25 +603,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E079ADAB24E15BEC00C360AF /* XCRemoteSwiftPackageReference "Fakery" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vadymmarkov/Fakery";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E079ADAC24E15BEC00C360AF /* Fakery */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E079ADAB24E15BEC00C360AF /* XCRemoteSwiftPackageReference "Fakery" */;
-			productName = Fakery;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E079AD7A24E1588000C360AF /* Project object */;
 }
