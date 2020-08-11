@@ -8,17 +8,24 @@
 
 import UIKit
 
-class AddressFormCell: UITableViewCell {
+class AddressFormCell: UICollectionViewCell {
+    
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var apartmentTextField: UITextField!
+    @IBOutlet weak var addButton: UIButton! {
+        didSet {
+            addButton.layer.cornerRadius = Constants.UI.defaultCornerRadius
+        }
+    }
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        contentView.layer.cornerRadius = Constants.UI.defaultCornerRadius
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func addButtonClicked(_ sender: Any) {
     }
     
 }

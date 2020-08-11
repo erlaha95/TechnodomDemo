@@ -21,6 +21,7 @@
 		E079ADBD24E184BC00C360AF /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADBC24E184BC00C360AF /* City.swift */; };
 		E079ADBF24E1854B00C360AF /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADBE24E1854B00C360AF /* Address.swift */; };
 		E079ADC124E1863600C360AF /* AddressRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADC024E1863600C360AF /* AddressRepresentable.swift */; };
+		E079ADC524E18A2500C360AF /* AddressGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADC424E18A2500C360AF /* AddressGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E079ADBC24E184BC00C360AF /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		E079ADBE24E1854B00C360AF /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		E079ADC024E1863600C360AF /* AddressRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRepresentable.swift; sourceTree = "<group>"; };
+		E079ADC424E18A2500C360AF /* AddressGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E079ADBC24E184BC00C360AF /* City.swift */,
 				E079ADBE24E1854B00C360AF /* Address.swift */,
 				E079ADC024E1863600C360AF /* AddressRepresentable.swift */,
+				E079ADC424E18A2500C360AF /* AddressGenerator.swift */,
 			);
 			path = TechnodomDemo;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				E079ADB724E17E5C00C360AF /* MainViewController.swift in Sources */,
 				E079ADBF24E1854B00C360AF /* Address.swift in Sources */,
 				E079ADBD24E184BC00C360AF /* City.swift in Sources */,
+				E079ADC524E18A2500C360AF /* AddressGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

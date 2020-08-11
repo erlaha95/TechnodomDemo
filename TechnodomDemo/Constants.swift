@@ -6,12 +6,12 @@
 //  Copyright © 2020 ismailov.kz. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Constants {
     
     struct UI {
-        static let defaultCornerRadius = 16.0
+        static let defaultCornerRadius: CGFloat = 16.0
     }
     
 }
