@@ -1,5 +1,5 @@
 //
-//  CollectionHeaderView.swift
+//  CityListView.swift
 //  TechnodomDemo
 //
 //  Created by Yerlan Ismailov on 8/11/20.
@@ -9,10 +9,10 @@
 import UIKit
 
 protocol TopHeaderViewProtocol: class {
-    func didSelect(item: CollectionHeaderView.ItemType)
+    func didSelect(item: CityListView.ItemType)
 }
 
-class CollectionHeaderView: UICollectionReusableView {
+class CityListView: UICollectionReusableView {
     
     enum Section: Int, CaseIterable {
         case add
@@ -37,20 +37,24 @@ class CollectionHeaderView: UICollectionReusableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layout.itemSize = CGSize(width: 115, height: 85)
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
-        
-        collectionView.collectionViewLayout = layout
+        setupCollectionViewLayout()
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
         collectionView.reloadData()
     }
+    
+    private func setupCollectionViewLayout() {
+        layout.itemSize = CGSize(width: 115, height: 85)
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+        
+        collectionView.collectionViewLayout = layout
+    }
 }
 
-extension CollectionHeaderView: UICollectionViewDataSource {
+extension CityListView: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return Section.allCases.count
@@ -88,7 +92,7 @@ extension CollectionHeaderView: UICollectionViewDataSource {
     }
 }
 
-extension CollectionHeaderView: UICollectionViewDelegate {
+extension CityListView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let sectiontype = Section(rawValue: indexPath.section) else {
             fatalError("Section \(indexPath.section) is not handled")
@@ -107,7 +111,7 @@ extension CollectionHeaderView: UICollectionViewDelegate {
     }
 }
 
-extension CollectionHeaderView: UICollectionViewDelegateFlowLayout {
+extension CityListView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let sectiontype = Section(rawValue: indexPath.section) else {
             fatalError("Section \(indexPath.section) is not handled")

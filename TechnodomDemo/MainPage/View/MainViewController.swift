@@ -77,9 +77,9 @@ extension MainViewController: UICollectionViewDataSource {
         case UICollectionView.elementKindSectionHeader:
             let headerView = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
-                withReuseIdentifier: "CollectionHeaderView",
+                withReuseIdentifier: "CityListView",
                 for: indexPath
-            ) as! CollectionHeaderView
+            ) as! CityListView
             return headerView
         default:
             return UICollectionReusableView()

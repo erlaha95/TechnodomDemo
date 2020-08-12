@@ -23,10 +23,17 @@
 		E079ADBF24E1854B00C360AF /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADBE24E1854B00C360AF /* Address.swift */; };
 		E079ADC124E1863600C360AF /* AddressRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADC024E1863600C360AF /* AddressRepresentable.swift */; };
 		E079ADC524E18A2500C360AF /* AddressGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADC424E18A2500C360AF /* AddressGenerator.swift */; };
-		E0A1CEA624E2AA7B0018F28E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */; };
+		E0A1CEA624E2AA7B0018F28E /* CityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEA524E2AA7B0018F28E /* CityListView.swift */; };
 		E0A1CEA824E2BD1D0018F28E /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEA724E2BD1D0018F28E /* CityCell.swift */; };
 		E0A1CEB024E3F16E0018F28E /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEAF24E3F16E0018F28E /* UICollectionView+Extensions.swift */; };
 		E0A1CEB424E41DF10018F28E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEB324E41DF10018F28E /* UIView+Extensions.swift */; };
+		E0A1CEBD24E424DF0018F28E /* CityListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEBC24E424DF0018F28E /* CityListPresenterProtocol.swift */; };
+		E0A1CEC624E4267E0018F28E /* CityListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEC524E4267E0018F28E /* CityListInteractorProtocol.swift */; };
+		E0A1CECB24E426D50018F28E /* CityListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CECA24E426D50018F28E /* CityListRouterProtocol.swift */; };
+		E0A1CECE24E429120018F28E /* CityListConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CECD24E429120018F28E /* CityListConfiguratorProtocol.swift */; };
+		E0A1CED024E4295B0018F28E /* CityListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CECF24E4295B0018F28E /* CityListViewProtocol.swift */; };
+		E0A1CED224E4298B0018F28E /* CityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CED124E4298B0018F28E /* CityListPresenter.swift */; };
+		E0A1CED424E4426A0018F28E /* AddressServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CED324E4426A0018F28E /* AddressServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +70,17 @@
 		E079ADBE24E1854B00C360AF /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		E079ADC024E1863600C360AF /* AddressRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRepresentable.swift; sourceTree = "<group>"; };
 		E079ADC424E18A2500C360AF /* AddressGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressGenerator.swift; sourceTree = "<group>"; };
-		E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		E0A1CEA524E2AA7B0018F28E /* CityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListView.swift; sourceTree = "<group>"; };
 		E0A1CEA724E2BD1D0018F28E /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		E0A1CEAF24E3F16E0018F28E /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		E0A1CEB324E41DF10018F28E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E0A1CEBC24E424DF0018F28E /* CityListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListPresenterProtocol.swift; sourceTree = "<group>"; };
+		E0A1CEC524E4267E0018F28E /* CityListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListInteractorProtocol.swift; sourceTree = "<group>"; };
+		E0A1CECA24E426D50018F28E /* CityListRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityListRouterProtocol.swift; sourceTree = "<group>"; };
+		E0A1CECD24E429120018F28E /* CityListConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListConfiguratorProtocol.swift; sourceTree = "<group>"; };
+		E0A1CECF24E4295B0018F28E /* CityListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewProtocol.swift; sourceTree = "<group>"; };
+		E0A1CED124E4298B0018F28E /* CityListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListPresenter.swift; sourceTree = "<group>"; };
+		E0A1CED324E4426A0018F28E /* AddressServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServiceProtocol.swift; sourceTree = "<group>"; };
 		F242419DADC1E654C3FD1EC4 /* Pods-TechnodomDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnodomDemo.release.xcconfig"; path = "Target Support Files/Pods-TechnodomDemo/Pods-TechnodomDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +149,7 @@
 			children = (
 				E079AD8524E1588000C360AF /* AppDelegate.swift */,
 				E079ADA924E1596100C360AF /* Constants.swift */,
+				E0A1CEB524E422B40018F28E /* CityList */,
 				E0A1CEA924E3F0840018F28E /* MainPage */,
 				E079AD8E24E1588300C360AF /* Assets.xcassets */,
 				E079AD9024E1588300C360AF /* LaunchScreen.storyboard */,
@@ -159,7 +174,6 @@
 			children = (
 				E0A1CEB224E40D800018F28E /* Presenter */,
 				E0A1CEB124E40D760018F28E /* Interactor */,
-				E0A1CEAE24E3F1390018F28E /* Service */,
 				E0A1CEAD24E3F0FC0018F28E /* Entity */,
 				E0A1CEAA24E3F0AF0018F28E /* View */,
 				E079ADAE24E166BB00C360AF /* Main.storyboard */,
@@ -171,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				E079ADB624E17E5C00C360AF /* MainViewController.swift */,
-				E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */,
 				E0A1CEAB24E3F0B40018F28E /* Cell */,
 			);
 			path = View;
@@ -210,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				E079ADC424E18A2500C360AF /* AddressGenerator.swift */,
+				E0A1CED324E4426A0018F28E /* AddressServiceProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -226,6 +240,61 @@
 			children = (
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E0A1CEB524E422B40018F28E /* CityList */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CEAE24E3F1390018F28E /* Service */,
+				E0A1CECC24E429040018F28E /* Configurator */,
+				E0A1CEBE24E424E60018F28E /* Interactor */,
+				E0A1CEBB24E423560018F28E /* Presenter */,
+				E0A1CEB624E422F70018F28E /* View */,
+				E0A1CEC924E426D50018F28E /* Router */,
+			);
+			path = CityList;
+			sourceTree = "<group>";
+		};
+		E0A1CEB624E422F70018F28E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CEA524E2AA7B0018F28E /* CityListView.swift */,
+				E0A1CECF24E4295B0018F28E /* CityListViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0A1CEBB24E423560018F28E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CEBC24E424DF0018F28E /* CityListPresenterProtocol.swift */,
+				E0A1CED124E4298B0018F28E /* CityListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E0A1CEBE24E424E60018F28E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CEC524E4267E0018F28E /* CityListInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E0A1CEC924E426D50018F28E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CECA24E426D50018F28E /* CityListRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E0A1CECC24E429040018F28E /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CECD24E429120018F28E /* CityListConfiguratorProtocol.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,18 +467,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E079AD8624E1588000C360AF /* AppDelegate.swift in Sources */,
-				E0A1CEA624E2AA7B0018F28E /* CollectionHeaderView.swift in Sources */,
+				E0A1CEA624E2AA7B0018F28E /* CityListView.swift in Sources */,
 				E079ADB924E1834100C360AF /* AddressCell.swift in Sources */,
 				E0A1CEA824E2BD1D0018F28E /* CityCell.swift in Sources */,
+				E0A1CED424E4426A0018F28E /* AddressServiceProtocol.swift in Sources */,
 				E079ADAA24E1596100C360AF /* Constants.swift in Sources */,
+				E0A1CED024E4295B0018F28E /* CityListViewProtocol.swift in Sources */,
+				E0A1CED224E4298B0018F28E /* CityListPresenter.swift in Sources */,
 				E0A1CEB424E41DF10018F28E /* UIView+Extensions.swift in Sources */,
 				E079ADB424E16CF600C360AF /* AddressFormCell.swift in Sources */,
+				E0A1CECE24E429120018F28E /* CityListConfiguratorProtocol.swift in Sources */,
+				E0A1CEBD24E424DF0018F28E /* CityListPresenterProtocol.swift in Sources */,
 				E079ADC124E1863600C360AF /* AddressRepresentable.swift in Sources */,
+				E0A1CEC624E4267E0018F28E /* CityListInteractorProtocol.swift in Sources */,
 				E079ADB724E17E5C00C360AF /* MainViewController.swift in Sources */,
 				E0A1CEB024E3F16E0018F28E /* UICollectionView+Extensions.swift in Sources */,
 				E079ADBF24E1854B00C360AF /* Address.swift in Sources */,
 				E079ADBD24E184BC00C360AF /* City.swift in Sources */,
 				E079ADC524E18A2500C360AF /* AddressGenerator.swift in Sources */,
+				E0A1CECB24E426D50018F28E /* CityListRouterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
