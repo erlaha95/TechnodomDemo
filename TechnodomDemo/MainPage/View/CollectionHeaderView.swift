@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TopHeaderViewProtocol: class {
+    func didSelect(item: CollectionHeaderView.ItemType)
+}
+
 class CollectionHeaderView: UICollectionReusableView {
     
     enum Section: Int, CaseIterable {
@@ -15,8 +19,15 @@ class CollectionHeaderView: UICollectionReusableView {
         case cities
     }
     
+    enum ItemType {
+        case add
+        case city(City)
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView!
     private let layout = UICollectionViewFlowLayout()
+    
+    weak var delegate: TopHeaderViewProtocol?
     
     private let cities: [City] = {
         let service = AddressGenerator()
@@ -63,10 +74,7 @@ extension CollectionHeaderView: UICollectionViewDataSource {
             fatalError("Section \(indexPath.section) is not handled")
         }
         
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "CityCell",
-            for: indexPath
-        ) as! CityCell
+        let cell: CityCell = collectionView.dequeueReusableCell(for: indexPath)
         
         switch sectiontype {
         case .add:
@@ -82,14 +90,37 @@ extension CollectionHeaderView: UICollectionViewDataSource {
 
 extension CollectionHeaderView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let sectiontype = Section(rawValue: indexPath.section) else {
+            fatalError("Section \(indexPath.section) is not handled")
+        }
         
-        let city = cities[indexPath.item]
-        print("Did select - \(city.name)")
+        let cell: CityCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.isSelected = true
+        
+        switch sectiontype {
+        case .add:
+            delegate?.didSelect(item: .add)
+        case .cities:
+            let city = cities[indexPath.item]
+            delegate?.didSelect(item: .city(city))
+        }
     }
 }
 
 extension CollectionHeaderView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 115, height: collectionView.frame.height)
+        guard let sectiontype = Section(rawValue: indexPath.section) else {
+            fatalError("Section \(indexPath.section) is not handled")
+        }
+        switch sectiontype {
+        case .add:
+            return CGSize(width: 115, height: collectionView.frame.height)
+        case .cities:
+            let city = cities[indexPath.item]
+            let label = UILabel(frame: .zero)
+            label.text = city.name
+            label.sizeToFit()
+            return CGSize(width: label.frame.width + 40, height: collectionView.frame.height)
+        }
     }
 }

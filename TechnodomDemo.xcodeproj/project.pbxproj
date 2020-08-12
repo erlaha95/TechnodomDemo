@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,8 @@
 		E079ADC524E18A2500C360AF /* AddressGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADC424E18A2500C360AF /* AddressGenerator.swift */; };
 		E0A1CEA624E2AA7B0018F28E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */; };
 		E0A1CEA824E2BD1D0018F28E /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEA724E2BD1D0018F28E /* CityCell.swift */; };
+		E0A1CEB024E3F16E0018F28E /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEAF24E3F16E0018F28E /* UICollectionView+Extensions.swift */; };
+		E0A1CEB424E41DF10018F28E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEB324E41DF10018F28E /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		E079ADC424E18A2500C360AF /* AddressGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressGenerator.swift; sourceTree = "<group>"; };
 		E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		E0A1CEA724E2BD1D0018F28E /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		E0A1CEAF24E3F16E0018F28E /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		E0A1CEB324E41DF10018F28E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F242419DADC1E654C3FD1EC4 /* Pods-TechnodomDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnodomDemo.release.xcconfig"; path = "Target Support Files/Pods-TechnodomDemo/Pods-TechnodomDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +98,6 @@
 				3CD33DA346991ABD7B612D04 /* Pods-TechnodomDemoTests.debug.xcconfig */,
 				8BDE5FFD5782BBF3C70D4E61 /* Pods-TechnodomDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,21 +134,13 @@
 			isa = PBXGroup;
 			children = (
 				E079AD8524E1588000C360AF /* AppDelegate.swift */,
+				E079ADA924E1596100C360AF /* Constants.swift */,
+				E0A1CEA924E3F0840018F28E /* MainPage */,
 				E079AD8E24E1588300C360AF /* Assets.xcassets */,
 				E079AD9024E1588300C360AF /* LaunchScreen.storyboard */,
 				E079AD9324E1588300C360AF /* Info.plist */,
-				E079ADA924E1596100C360AF /* Constants.swift */,
-				E079ADAE24E166BB00C360AF /* Main.storyboard */,
-				E079ADB224E16CF600C360AF /* AddressFormCell.swift */,
-				E079ADB324E16CF600C360AF /* AddressFormCell.xib */,
-				E079ADB624E17E5C00C360AF /* MainViewController.swift */,
-				E079ADB824E1834100C360AF /* AddressCell.swift */,
-				E079ADBC24E184BC00C360AF /* City.swift */,
-				E079ADBE24E1854B00C360AF /* Address.swift */,
-				E079ADC024E1863600C360AF /* AddressRepresentable.swift */,
-				E079ADC424E18A2500C360AF /* AddressGenerator.swift */,
-				E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */,
-				E0A1CEA724E2BD1D0018F28E /* CityCell.swift */,
+				E0A1CEAF24E3F16E0018F28E /* UICollectionView+Extensions.swift */,
+				E0A1CEB324E41DF10018F28E /* UIView+Extensions.swift */,
 			);
 			path = TechnodomDemo;
 			sourceTree = "<group>";
@@ -157,6 +152,80 @@
 				E079AD9E24E1588300C360AF /* Info.plist */,
 			);
 			path = TechnodomDemoTests;
+			sourceTree = "<group>";
+		};
+		E0A1CEA924E3F0840018F28E /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CEB224E40D800018F28E /* Presenter */,
+				E0A1CEB124E40D760018F28E /* Interactor */,
+				E0A1CEAE24E3F1390018F28E /* Service */,
+				E0A1CEAD24E3F0FC0018F28E /* Entity */,
+				E0A1CEAA24E3F0AF0018F28E /* View */,
+				E079ADAE24E166BB00C360AF /* Main.storyboard */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		E0A1CEAA24E3F0AF0018F28E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E079ADB624E17E5C00C360AF /* MainViewController.swift */,
+				E0A1CEA524E2AA7B0018F28E /* CollectionHeaderView.swift */,
+				E0A1CEAB24E3F0B40018F28E /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0A1CEAB24E3F0B40018F28E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CEA724E2BD1D0018F28E /* CityCell.swift */,
+				E079ADB824E1834100C360AF /* AddressCell.swift */,
+				E0A1CEAC24E3F0CB0018F28E /* AddressFormCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E0A1CEAC24E3F0CB0018F28E /* AddressFormCell */ = {
+			isa = PBXGroup;
+			children = (
+				E079ADB324E16CF600C360AF /* AddressFormCell.xib */,
+				E079ADB224E16CF600C360AF /* AddressFormCell.swift */,
+			);
+			path = AddressFormCell;
+			sourceTree = "<group>";
+		};
+		E0A1CEAD24E3F0FC0018F28E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E079ADC024E1863600C360AF /* AddressRepresentable.swift */,
+				E079ADBE24E1854B00C360AF /* Address.swift */,
+				E079ADBC24E184BC00C360AF /* City.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E0A1CEAE24E3F1390018F28E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E079ADC424E18A2500C360AF /* AddressGenerator.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E0A1CEB124E40D760018F28E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E0A1CEB224E40D800018F28E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,9 +402,11 @@
 				E079ADB924E1834100C360AF /* AddressCell.swift in Sources */,
 				E0A1CEA824E2BD1D0018F28E /* CityCell.swift in Sources */,
 				E079ADAA24E1596100C360AF /* Constants.swift in Sources */,
+				E0A1CEB424E41DF10018F28E /* UIView+Extensions.swift in Sources */,
 				E079ADB424E16CF600C360AF /* AddressFormCell.swift in Sources */,
 				E079ADC124E1863600C360AF /* AddressRepresentable.swift in Sources */,
 				E079ADB724E17E5C00C360AF /* MainViewController.swift in Sources */,
+				E0A1CEB024E3F16E0018F28E /* UICollectionView+Extensions.swift in Sources */,
 				E079ADBF24E1854B00C360AF /* Address.swift in Sources */,
 				E079ADBD24E184BC00C360AF /* City.swift in Sources */,
 				E079ADC524E18A2500C360AF /* AddressGenerator.swift in Sources */,

@@ -35,8 +35,7 @@ class MainViewController: UIViewController {
     }
     
     func setupCollectionView() {
-        let nib = UINib(nibName: "AddressFormCell", bundle: Bundle.main)
-        mainCollectionView.register(nib, forCellWithReuseIdentifier: "AddressFormCell")
+        mainCollectionView.registerNib(AddressFormCell.self)
         
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
@@ -64,16 +63,10 @@ extension MainViewController: UICollectionViewDataSource {
         }
         switch sectionType {
         case .list:
-            let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: "AddressCell",
-                for: indexPath
-            ) as! AddressCell
+            let cell: AddressCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
         case .form:
-            let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: "AddressFormCell",
-                for: indexPath
-            ) as! AddressFormCell
+            let cell: AddressFormCell = collectionView.dequeueReusableCell(for: indexPath)
             return cell
         }
     }
