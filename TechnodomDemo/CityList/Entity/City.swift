@@ -6,17 +6,22 @@
 //  Copyright © 2020 ismailov.kz. All rights reserved.
 //
 
-struct City {
+import RealmSwift
+
+class City: Object {
     
-    public let name: String
-    private var addresses = [Address]()
+    @objc dynamic var name: String
+    var addresses = List<Address>()
     
-    init(name: String, addresses: [Address] = []) {
+    init(name: String) {
         self.name = name
-        self.addresses = addresses
     }
     
-    mutating func add(address: Address) {
+    required init() {
+        name = ""
+    }
+    
+    func add(address: Address) {
         addresses.append(address)
     }
 }

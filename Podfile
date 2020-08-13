@@ -7,6 +7,7 @@ target 'TechnodomDemo' do
 
   # Pods for TechnodomDemo
   pod 'Fakery'
+  pod 'RealmSwift'
 
   target 'TechnodomDemoTests' do
     inherit! :search_paths

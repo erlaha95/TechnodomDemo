@@ -7,4 +7,6 @@
 //
 
 protocol CityListRouterProtocol: class {
+    func showAddresses(for city: City)
+    func showCreateAddressForm()
 }

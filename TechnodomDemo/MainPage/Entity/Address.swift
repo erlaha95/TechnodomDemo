@@ -6,16 +6,25 @@
 //  Copyright © 2020 ismailov.kz. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
 
-struct Address {
-    let street: String
-    let house: String
-    let apartment: String
+class Address: Object {
+    @objc dynamic var street: String
+    @objc dynamic var apartment: String
+    
+    init(street: String, apartment: String) {
+        self.street = street
+        self.apartment = apartment
+    }
+    
+    required init() {
+        self.street = ""
+        self.apartment = ""
+    }
 }
 
 extension Address: AddressRepresentable {
     var fullAddress: String {
-        return "\(street),\n\(house),\n\n\(house)"
+        return "\(street)\n\nКв. \(apartment)"
     }
 }

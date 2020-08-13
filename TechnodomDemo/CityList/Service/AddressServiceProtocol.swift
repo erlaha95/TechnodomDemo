@@ -9,5 +9,6 @@
 import Foundation
 
 protocol AddressServiceProtocol {
-    func loadRandomCities()
+    func loadAllCities() -> [City]
+    func save(city: String, address: String, apartment: String)
 }

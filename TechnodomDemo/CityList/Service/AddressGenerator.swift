@@ -20,11 +20,7 @@ struct AddressGenerator {
         return faker.address.streetName()
     }
     
-    private var buildingNumber: String {
-        return faker.address.buildingNumber()
-    }
-    
-    private var apartmentNumber: String {
+    private var randomApartmentNumber: String {
         return faker.address.buildingNumber()
     }
     
@@ -36,11 +32,12 @@ struct AddressGenerator {
         var cities = [City]()
         for _ in 0..<cityCount {
             var addresses = [Address]()
+            let city = City(name: randomCityName)
             for _ in 0..<addressesPerCityCount {
-                let address = Address(street: randomStreet, house: buildingNumber, apartment: apartmentNumber)
+                let address = Address(street: randomStreet, apartment: randomApartmentNumber)
                 addresses.append(address)
             }
-            let city = City(name: randomCityName, addresses: addresses)
+            city.addresses.append(objectsIn: addresses)
             cities.append(city)
         }
         

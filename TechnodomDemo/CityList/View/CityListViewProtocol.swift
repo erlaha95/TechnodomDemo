@@ -7,4 +7,5 @@
 //
 
 protocol CityListViewProtocol: class {
+    func present(cities: [City])
 }

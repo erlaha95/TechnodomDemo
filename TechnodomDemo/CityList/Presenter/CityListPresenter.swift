@@ -18,9 +18,21 @@ class CityListPresenter: CityListPresenterProtocol {
     }
     
     func loadCities() {
+        interactor.loadAllCities()
     }
     
-    
     func didSelect(item: CityListView.ItemType) {
+        switch item {
+        case .add:
+            router.showCreateAddressForm()
+        case .city(let city):
+            router.showAddresses(for: city)
+        }
+    }
+}
+
+extension CityListPresenter: CityListInteractorOutputProtocol {
+    func didLoad(cities: [City]) {
+        view.present(cities: cities)
     }
 }

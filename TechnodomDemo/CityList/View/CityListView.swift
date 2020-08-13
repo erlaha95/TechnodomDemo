@@ -8,31 +8,15 @@
 
 import UIKit
 
-protocol TopHeaderViewProtocol: class {
-    func didSelect(item: CityListView.ItemType)
-}
-
 class CityListView: UICollectionReusableView {
-    
-    enum Section: Int, CaseIterable {
-        case add
-        case cities
-    }
-    
-    enum ItemType {
-        case add
-        case city(City)
-    }
     
     @IBOutlet weak var collectionView: UICollectionView!
     private let layout = UICollectionViewFlowLayout()
     
-    weak var delegate: TopHeaderViewProtocol?
+    var presenter: CityListPresenterProtocol!
+    var configurator: CityListConfiguratorProtocol = CityListConfigurator()
     
-    private let cities: [City] = {
-        let service = AddressGenerator()
-        return service.genarateCities(cityCount: 5, addressesPerCityCount: 20)
-    }()
+    private var cities = [City]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +26,9 @@ class CityListView: UICollectionReusableView {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.reloadData()
+        configurator.configure(with: self)
+        
+        presenter.loadCities()
     }
     
     private func setupCollectionViewLayout() {
@@ -103,10 +89,10 @@ extension CityListView: UICollectionViewDelegate {
         
         switch sectiontype {
         case .add:
-            delegate?.didSelect(item: .add)
+            presenter.didSelect(item: .add)
         case .cities:
             let city = cities[indexPath.item]
-            delegate?.didSelect(item: .city(city))
+            presenter.didSelect(item: .city(city))
         }
     }
 }
@@ -126,5 +112,24 @@ extension CityListView: UICollectionViewDelegateFlowLayout {
             label.sizeToFit()
             return CGSize(width: label.frame.width + 40, height: collectionView.frame.height)
         }
+    }
+}
+
+extension CityListView: CityListViewProtocol {
+    func present(cities: [City]) {
+        self.cities = cities
+        collectionView.reloadData()
+    }
+}
+
+extension CityListView {
+    enum Section: Int, CaseIterable {
+        case add
+        case cities
+    }
+    
+    enum ItemType {
+        case add
+        case city(City)
     }
 }
