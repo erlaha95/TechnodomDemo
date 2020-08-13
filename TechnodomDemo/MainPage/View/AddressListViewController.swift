@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  AddressListViewController.swift
 //  TechnodomDemo
 //
 //  Created by Yerlan Ismailov on 8/10/20.
@@ -8,52 +8,78 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class AddressListViewController: UIViewController {
     
-    enum Section: Int, CaseIterable {
-        case list
-        case form
-        
-        var itemSize: CGSize {
-            switch self {
-            case .list:
-                return CGSize(width: 0.45 * UIScreen.main.bounds.width, height: 100)
-            case .form:
-                return CGSize(width: 0.9 * UIScreen.main.bounds.width, height: 210)
-            }
-        }
-    }
-    
-    @IBOutlet weak var mainCollectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     private let layout = UICollectionViewFlowLayout()
+    
+    private var addresses = [Address]()
+    private var selectedTab: Section = .form
+    
+    var presenter: AddressListPresenterProtocol!
+    var configurator: AddressListConfiguratorProtocol = AddressListConfigurator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCollectionView()
-        mainCollectionView.reloadData()
+        configurator.configure(view: self)
     }
     
     func setupCollectionView() {
-        mainCollectionView.registerNib(AddressFormCell.self)
+        collectionView.registerNib(AddressFormCell.self)
         
-        mainCollectionView.delegate = self
-        mainCollectionView.dataSource = self
-        mainCollectionView.collectionViewLayout = layout
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.collectionViewLayout = layout
         layout.itemSize = CGSize(width: 120, height: 120)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
 }
 
-extension MainViewController: UICollectionViewDataSource {
+extension AddressListViewController: AddressListViewProtocol {
+    
+    func present(addresses: [Address]) {
+        self.selectedTab = .list
+        self.addresses = addresses
+        collectionView.reloadData()
+    }
+    
+    func presentAddressForm() {
+        self.selectedTab = .form
+        collectionView.reloadData()
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+    func updateCities() {
+        let headerView = collectionView.visibleSupplementaryViews(ofKind: UICollectionView.elementKindSectionHeader).first as? CityListView
+        headerView?.presenter.loadCities()
+    }
+}
+
+extension AddressListViewController: AddressFormCellDelegate {
+    
+    func didTapSave(city: String?, street: String?, apartment: String?) {
+        presenter.save(city: city, street: street, apartment: apartment)
+    }
+}
+
+extension AddressListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let sectionType = Section(rawValue: section) else {
             fatalError("Section \(section) is not handled")
         }
         switch sectionType {
         case .list:
-            return 0
+            return (selectedTab == .list) ? addresses.count : 0
         case .form:
-            return 1
+            return (selectedTab == .form) ? 1 : 0
         }
     }
     
@@ -64,9 +90,12 @@ extension MainViewController: UICollectionViewDataSource {
         switch sectionType {
         case .list:
             let cell: AddressCell = collectionView.dequeueReusableCell(for: indexPath)
+            let address = addresses[indexPath.item]
+            cell.configureCell(with: address.fullAddress)
             return cell
         case .form:
             let cell: AddressFormCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
         }
     }
@@ -91,7 +120,7 @@ extension MainViewController: UICollectionViewDataSource {
     }
 }
 
-extension MainViewController: UICollectionViewDelegateFlowLayout {
+extension AddressListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let sectionType = Section(rawValue: indexPath.section) else {
             fatalError("Section \(indexPath.section) is not handled")
@@ -113,7 +142,23 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension MainViewController: UICollectionViewDelegate {
+extension AddressListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+
+extension AddressListViewController {
+    enum Section: Int, CaseIterable {
+        case list
+        case form
+        
+        var itemSize: CGSize {
+            switch self {
+            case .list:
+                return CGSize(width: 0.45 * UIScreen.main.bounds.width, height: 100)
+            case .form:
+                return CGSize(width: 0.9 * UIScreen.main.bounds.width, height: 210)
+            }
+        }
     }
 }

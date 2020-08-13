@@ -6,4 +6,11 @@
 //  Copyright © 2020 ismailov.kz. All rights reserved.
 //
 
-import Foundation
+protocol AddressListViewProtocol: class {
+    var presenter: AddressListPresenterProtocol! { get set }
+    
+    func present(addresses: [Address])
+    func presentAddressForm()
+    func showAlert(title: String, message: String)
+    func updateCities()
+}

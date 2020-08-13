@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Address List View Controller-->
         <scene sceneID="1rX-PD-EJf">
             <objects>
-                <viewController id="sm7-jJ-7xo" customClass="MainViewController" customModule="TechnodomDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sm7-jJ-7xo" customClass="AddressListViewController" customModule="TechnodomDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nNX-ib-pJP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,25 +34,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="165" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYX-bO-QnU">
-                                                    <rect key="frame" x="8" y="8" width="149" height="94"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-ms-mYn">
+                                                    <rect key="frame" x="4" y="4" width="157" height="102"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="uYX-bO-QnU">
+                                                            <rect key="frame" x="12" y="8" width="133" height="86"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="uYX-bO-QnU" firstAttribute="leading" secondItem="Yd6-ms-mYn" secondAttribute="leading" constant="12" id="2Ul-FM-EKK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="uYX-bO-QnU" secondAttribute="trailing" constant="12" id="OPD-QD-0Gc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="uYX-bO-QnU" secondAttribute="bottom" constant="8" id="pbJ-nT-Hg4"/>
+                                                        <constraint firstItem="uYX-bO-QnU" firstAttribute="top" secondItem="Yd6-ms-mYn" secondAttribute="top" constant="8" id="t9O-N5-AjH"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="uYX-bO-QnU" firstAttribute="top" secondItem="ZV5-sn-rv1" secondAttribute="top" constant="8" id="O5X-aC-Kfk"/>
-                                                <constraint firstAttribute="trailing" secondItem="uYX-bO-QnU" secondAttribute="trailing" constant="8" id="cnM-99-yo3"/>
-                                                <constraint firstItem="uYX-bO-QnU" firstAttribute="leading" secondItem="ZV5-sn-rv1" secondAttribute="leading" constant="8" id="eHC-iz-iRg"/>
-                                                <constraint firstAttribute="bottom" secondItem="uYX-bO-QnU" secondAttribute="bottom" constant="8" id="obK-pF-Gmb"/>
+                                                <constraint firstAttribute="bottom" secondItem="Yd6-ms-mYn" secondAttribute="bottom" constant="4" id="JJQ-T6-dc1"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yd6-ms-mYn" secondAttribute="trailing" constant="4" id="JSS-zI-g1f"/>
+                                                <constraint firstItem="Yd6-ms-mYn" firstAttribute="leading" secondItem="ZV5-sn-rv1" secondAttribute="leading" constant="4" id="pbo-N7-Yie"/>
+                                                <constraint firstItem="Yd6-ms-mYn" firstAttribute="top" secondItem="ZV5-sn-rv1" secondAttribute="top" constant="4" id="xpt-y9-yn0"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="customSize" width="165" height="110"/>
                                         <connections>
                                             <outlet property="addressLabel" destination="uYX-bO-QnU" id="tOy-sE-HdJ"/>
+                                            <outlet property="containerView" destination="Yd6-ms-mYn" id="Ro4-Me-6Rk"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -133,7 +145,7 @@
                         <viewLayoutGuide key="safeArea" id="RlS-hk-4Zq"/>
                     </view>
                     <connections>
-                        <outlet property="mainCollectionView" destination="yYH-zG-cl0" id="mVq-KK-KSA"/>
+                        <outlet property="collectionView" destination="yYH-zG-cl0" id="mVq-KK-KSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGH-ux-PgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

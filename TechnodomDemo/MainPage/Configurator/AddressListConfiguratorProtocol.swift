@@ -6,4 +6,6 @@
 //  Copyright © 2020 ismailov.kz. All rights reserved.
 //
 
-import Foundation
+protocol AddressListConfiguratorProtocol: class {
+    func configure(view: AddressListViewProtocol)
+}

@@ -1,5 +1,5 @@
 //
-//  AddressServiceProtocol.swift
+//  CityServiceProtocol.swift
 //  TechnodomDemo
 //
 //  Created by Yerlan Ismailov on 8/12/20.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-protocol AddressServiceProtocol {
+protocol CityServiceProtocol {
     func loadAllCities() -> [City]
-    func save(city: String, address: String, apartment: String)
 }

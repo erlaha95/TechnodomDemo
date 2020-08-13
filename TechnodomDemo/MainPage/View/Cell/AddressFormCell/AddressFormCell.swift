@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AddressFormCellDelegate: class {
+    func didTapSave(city: String?, street: String?, apartment: String?)
+}
+
 class AddressFormCell: UICollectionViewCell {
     
     @IBOutlet weak var cityTextField: UITextField!
@@ -18,6 +22,8 @@ class AddressFormCell: UICollectionViewCell {
             addButton.layer.cornerRadius = Constants.UI.defaultCornerRadius
         }
     }
+    
+    weak var delegate: AddressFormCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +31,11 @@ class AddressFormCell: UICollectionViewCell {
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {
+        delegate?.didTapSave(
+            city: cityTextField.text,
+            street: addressTextField.text,
+            apartment: apartmentTextField.text
+        )
     }
     
 }

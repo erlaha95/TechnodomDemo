@@ -1,5 +1,5 @@
 //
-//  AddressService.swift
+//  CityService.swift
 //  TechnodomDemo
 //
 //  Created by Yerlan Ismailov on 8/13/20.
@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-class AddressService: AddressServiceProtocol {
+class CityService: CityServiceProtocol {
     
     private let realm: Realm
     private var isFirstLaunch: Bool {
@@ -37,27 +37,8 @@ class AddressService: AddressServiceProtocol {
     }
     
     func loadAllCities() -> [City] {
-        if cities.isEmpty {
-            let items = realm.objects(City.self)
-            self.cities = items.sorted { _,_ in true }
-        }
+        let items = realm.objects(City.self)
+        self.cities = items.sorted { _,_ in true }
         return cities
-    }
-    
-    func save(city: String, address: String, apartment: String) {
-        if let foundCity = realm.objects(City.self).first(where: { $0.name == city }) {
-            let address = Address(street: address, apartment: apartment)
-            try! realm.write {
-                foundCity.add(address: address)
-            }
-        } else {
-            let city = City(name: city)
-            let address = Address(street: address, apartment: apartment)
-            city.add(address: address)
-            
-            try! realm.write {
-                realm.add(city)
-            }
-        }
     }
 }

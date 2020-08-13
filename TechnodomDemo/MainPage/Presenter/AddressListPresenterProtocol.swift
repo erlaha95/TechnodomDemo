@@ -9,4 +9,10 @@
 import Foundation
 
 protocol AddressListPresenterProtocol: class {
+    
+    var router: AddressListRouterProtocol! { set get }
+    var interactor: AddressListInteractorProtocol! { set get }
+    
+    func save(city: String?, street: String?, apartment: String?)
+    
 }

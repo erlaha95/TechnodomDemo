@@ -6,6 +6,8 @@
 //  Copyright © 2020 ismailov.kz. All rights reserved.
 //
 
+import Foundation
+
 class CityListRouter: CityListRouterProtocol {
     
     private unowned let view: CityListViewProtocol
@@ -15,8 +17,10 @@ class CityListRouter: CityListRouterProtocol {
     }
     
     func showAddresses(for city: City) {
+        NotificationCenter.default.post(name: .didSelectCity, object: city)
     }
     
     func showCreateAddressForm() {
+        NotificationCenter.default.post(name: .didSelectCreateAddress, object: nil)
     }
 }

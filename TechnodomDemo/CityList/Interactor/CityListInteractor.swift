@@ -8,20 +8,16 @@
 
 class CityListInteractor: CityListInteractorProtocol {
     
-    private let service: AddressServiceProtocol
+    private let service: CityServiceProtocol
     
     weak var presenter: CityListInteractorOutputProtocol!
     
-    init(service: AddressServiceProtocol = AddressService()) {
+    init(service: CityServiceProtocol = CityService()) {
         self.service = service
     }
     
     func loadAllCities() {
         let cities = service.loadAllCities()
         presenter.didLoad(cities: cities)
-    }
-    
-    func saveAddress(city: String, street: String, apartment: String) {
-        service.save(city: city, address: street, apartment: apartment)
     }
 }

@@ -17,7 +17,7 @@
 		E079ADAF24E166BB00C360AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E079ADAE24E166BB00C360AF /* Main.storyboard */; };
 		E079ADB424E16CF600C360AF /* AddressFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADB224E16CF600C360AF /* AddressFormCell.swift */; };
 		E079ADB524E16CF600C360AF /* AddressFormCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E079ADB324E16CF600C360AF /* AddressFormCell.xib */; };
-		E079ADB724E17E5C00C360AF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADB624E17E5C00C360AF /* MainViewController.swift */; };
+		E079ADB724E17E5C00C360AF /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADB624E17E5C00C360AF /* AddressListViewController.swift */; };
 		E079ADB924E1834100C360AF /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADB824E1834100C360AF /* AddressCell.swift */; };
 		E079ADBD24E184BC00C360AF /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADBC24E184BC00C360AF /* City.swift */; };
 		E079ADBF24E1854B00C360AF /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079ADBE24E1854B00C360AF /* Address.swift */; };
@@ -33,8 +33,8 @@
 		E0A1CECE24E429120018F28E /* CityListConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CECD24E429120018F28E /* CityListConfiguratorProtocol.swift */; };
 		E0A1CED024E4295B0018F28E /* CityListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CECF24E4295B0018F28E /* CityListViewProtocol.swift */; };
 		E0A1CED224E4298B0018F28E /* CityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CED124E4298B0018F28E /* CityListPresenter.swift */; };
-		E0A1CED424E4426A0018F28E /* AddressServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CED324E4426A0018F28E /* AddressServiceProtocol.swift */; };
-		E0A1CED724E50D4C0018F28E /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CED624E50D4C0018F28E /* AddressService.swift */; };
+		E0A1CED424E4426A0018F28E /* CityServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CED324E4426A0018F28E /* CityServiceProtocol.swift */; };
+		E0A1CED724E50D4C0018F28E /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CED624E50D4C0018F28E /* CityService.swift */; };
 		E0A1CEDF24E5535E0018F28E /* CityListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEDE24E5535E0018F28E /* CityListInteractor.swift */; };
 		E0A1CEE124E554730018F28E /* CityListInteractorOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEE024E554730018F28E /* CityListInteractorOutputProtocol.swift */; };
 		E0A1CEE324E558B00018F28E /* CityListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEE224E558B00018F28E /* CityListRouter.swift */; };
@@ -44,6 +44,14 @@
 		E0A1CEED24E57F3D0018F28E /* AddressListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEEC24E57F3D0018F28E /* AddressListInteractorProtocol.swift */; };
 		E0A1CEEF24E57FAE0018F28E /* AddressListConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEEE24E57FAE0018F28E /* AddressListConfiguratorProtocol.swift */; };
 		E0A1CEF124E580170018F28E /* AddressListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEF024E580170018F28E /* AddressListViewProtocol.swift */; };
+		E0A1CEF324E58A430018F28E /* AddressListInteractorOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEF224E58A430018F28E /* AddressListInteractorOutputProtocol.swift */; };
+		E0A1CEF524E58BBD0018F28E /* AddressListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEF424E58BBD0018F28E /* AddressListPresenter.swift */; };
+		E0A1CEF724E58E410018F28E /* AddressListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEF624E58E410018F28E /* AddressListConfigurator.swift */; };
+		E0A1CEF924E590250018F28E /* AddressListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEF824E590250018F28E /* AddressListInteractor.swift */; };
+		E0A1CEFC24E5911B0018F28E /* AddressServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEFB24E5911B0018F28E /* AddressServiceProtocol.swift */; };
+		E0A1CEFE24E5913D0018F28E /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEFD24E5913D0018F28E /* AddressService.swift */; };
+		E0A1CF0024E5928D0018F28E /* AddressListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CEFF24E5928D0018F28E /* AddressListRouter.swift */; };
+		E0A1CF0224E59AE30018F28E /* NSNotificationName+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A1CF0124E59AE30018F28E /* NSNotificationName+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +82,7 @@
 		E079ADAE24E166BB00C360AF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E079ADB224E16CF600C360AF /* AddressFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFormCell.swift; sourceTree = "<group>"; };
 		E079ADB324E16CF600C360AF /* AddressFormCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressFormCell.xib; sourceTree = "<group>"; };
-		E079ADB624E17E5C00C360AF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E079ADB624E17E5C00C360AF /* AddressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
 		E079ADB824E1834100C360AF /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		E079ADBC24E184BC00C360AF /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		E079ADBE24E1854B00C360AF /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -90,8 +98,8 @@
 		E0A1CECD24E429120018F28E /* CityListConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		E0A1CECF24E4295B0018F28E /* CityListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewProtocol.swift; sourceTree = "<group>"; };
 		E0A1CED124E4298B0018F28E /* CityListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListPresenter.swift; sourceTree = "<group>"; };
-		E0A1CED324E4426A0018F28E /* AddressServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServiceProtocol.swift; sourceTree = "<group>"; };
-		E0A1CED624E50D4C0018F28E /* AddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
+		E0A1CED324E4426A0018F28E /* CityServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceProtocol.swift; sourceTree = "<group>"; };
+		E0A1CED624E50D4C0018F28E /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		E0A1CEDE24E5535E0018F28E /* CityListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListInteractor.swift; sourceTree = "<group>"; };
 		E0A1CEE024E554730018F28E /* CityListInteractorOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListInteractorOutputProtocol.swift; sourceTree = "<group>"; };
 		E0A1CEE224E558B00018F28E /* CityListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListRouter.swift; sourceTree = "<group>"; };
@@ -101,6 +109,14 @@
 		E0A1CEEC24E57F3D0018F28E /* AddressListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListInteractorProtocol.swift; sourceTree = "<group>"; };
 		E0A1CEEE24E57FAE0018F28E /* AddressListConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		E0A1CEF024E580170018F28E /* AddressListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListViewProtocol.swift; sourceTree = "<group>"; };
+		E0A1CEF224E58A430018F28E /* AddressListInteractorOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListInteractorOutputProtocol.swift; sourceTree = "<group>"; };
+		E0A1CEF424E58BBD0018F28E /* AddressListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListPresenter.swift; sourceTree = "<group>"; };
+		E0A1CEF624E58E410018F28E /* AddressListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListConfigurator.swift; sourceTree = "<group>"; };
+		E0A1CEF824E590250018F28E /* AddressListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListInteractor.swift; sourceTree = "<group>"; };
+		E0A1CEFB24E5911B0018F28E /* AddressServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServiceProtocol.swift; sourceTree = "<group>"; };
+		E0A1CEFD24E5913D0018F28E /* AddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
+		E0A1CEFF24E5928D0018F28E /* AddressListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListRouter.swift; sourceTree = "<group>"; };
+		E0A1CF0124E59AE30018F28E /* NSNotificationName+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotificationName+Extensions.swift"; sourceTree = "<group>"; };
 		F242419DADC1E654C3FD1EC4 /* Pods-TechnodomDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnodomDemo.release.xcconfig"; path = "Target Support Files/Pods-TechnodomDemo/Pods-TechnodomDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +206,7 @@
 		E0A1CEA924E3F0840018F28E /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				E0A1CEFA24E5910D0018F28E /* Service */,
 				E0A1CEAA24E3F0AF0018F28E /* View */,
 				E0A1CEB124E40D760018F28E /* Interactor */,
 				E0A1CEB224E40D800018F28E /* Presenter */,
@@ -205,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				E0A1CEF024E580170018F28E /* AddressListViewProtocol.swift */,
-				E079ADB624E17E5C00C360AF /* MainViewController.swift */,
+				E079ADB624E17E5C00C360AF /* AddressListViewController.swift */,
 				E0A1CEAB24E3F0B40018F28E /* Cell */,
 			);
 			path = View;
@@ -243,8 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				E079ADC424E18A2500C360AF /* AddressGenerator.swift */,
-				E0A1CED324E4426A0018F28E /* AddressServiceProtocol.swift */,
-				E0A1CED624E50D4C0018F28E /* AddressService.swift */,
+				E0A1CED324E4426A0018F28E /* CityServiceProtocol.swift */,
+				E0A1CED624E50D4C0018F28E /* CityService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -253,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				E0A1CEEC24E57F3D0018F28E /* AddressListInteractorProtocol.swift */,
+				E0A1CEF224E58A430018F28E /* AddressListInteractorOutputProtocol.swift */,
+				E0A1CEF824E590250018F28E /* AddressListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -261,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				E0A1CEE824E57F0C0018F28E /* AddressListPresenterProtocol.swift */,
+				E0A1CEF424E58BBD0018F28E /* AddressListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -347,6 +367,7 @@
 			children = (
 				E0A1CEB324E41DF10018F28E /* UIView+Extensions.swift */,
 				E0A1CEAF24E3F16E0018F28E /* UICollectionView+Extensions.swift */,
+				E0A1CF0124E59AE30018F28E /* NSNotificationName+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -355,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				E0A1CEEA24E57F290018F28E /* AddressListRouterProtocol.swift */,
+				E0A1CEFF24E5928D0018F28E /* AddressListRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -363,8 +385,18 @@
 			isa = PBXGroup;
 			children = (
 				E0A1CEEE24E57FAE0018F28E /* AddressListConfiguratorProtocol.swift */,
+				E0A1CEF624E58E410018F28E /* AddressListConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E0A1CEFA24E5910D0018F28E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CEFB24E5911B0018F28E /* AddressServiceProtocol.swift */,
+				E0A1CEFD24E5913D0018F28E /* AddressService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,24 +569,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				E079AD8624E1588000C360AF /* AppDelegate.swift in Sources */,
+				E0A1CEF924E590250018F28E /* AddressListInteractor.swift in Sources */,
 				E0A1CEA624E2AA7B0018F28E /* CityListView.swift in Sources */,
+				E0A1CEF324E58A430018F28E /* AddressListInteractorOutputProtocol.swift in Sources */,
 				E079ADB924E1834100C360AF /* AddressCell.swift in Sources */,
 				E0A1CEDF24E5535E0018F28E /* CityListInteractor.swift in Sources */,
 				E0A1CEA824E2BD1D0018F28E /* CityCell.swift in Sources */,
 				E0A1CEE124E554730018F28E /* CityListInteractorOutputProtocol.swift in Sources */,
-				E0A1CED424E4426A0018F28E /* AddressServiceProtocol.swift in Sources */,
+				E0A1CED424E4426A0018F28E /* CityServiceProtocol.swift in Sources */,
+				E0A1CEFC24E5911B0018F28E /* AddressServiceProtocol.swift in Sources */,
 				E079ADAA24E1596100C360AF /* Constants.swift in Sources */,
+				E0A1CF0024E5928D0018F28E /* AddressListRouter.swift in Sources */,
+				E0A1CEF724E58E410018F28E /* AddressListConfigurator.swift in Sources */,
 				E0A1CED024E4295B0018F28E /* CityListViewProtocol.swift in Sources */,
 				E0A1CED224E4298B0018F28E /* CityListPresenter.swift in Sources */,
 				E0A1CEB424E41DF10018F28E /* UIView+Extensions.swift in Sources */,
 				E079ADB424E16CF600C360AF /* AddressFormCell.swift in Sources */,
 				E0A1CECE24E429120018F28E /* CityListConfiguratorProtocol.swift in Sources */,
 				E0A1CEEB24E57F290018F28E /* AddressListRouterProtocol.swift in Sources */,
+				E0A1CEF524E58BBD0018F28E /* AddressListPresenter.swift in Sources */,
 				E0A1CEE924E57F0C0018F28E /* AddressListPresenterProtocol.swift in Sources */,
 				E0A1CEBD24E424DF0018F28E /* CityListPresenterProtocol.swift in Sources */,
 				E079ADC124E1863600C360AF /* AddressRepresentable.swift in Sources */,
+				E0A1CEFE24E5913D0018F28E /* AddressService.swift in Sources */,
+				E0A1CF0224E59AE30018F28E /* NSNotificationName+Extensions.swift in Sources */,
 				E0A1CEC624E4267E0018F28E /* CityListInteractorProtocol.swift in Sources */,
-				E079ADB724E17E5C00C360AF /* MainViewController.swift in Sources */,
+				E079ADB724E17E5C00C360AF /* AddressListViewController.swift in Sources */,
 				E0A1CEF124E580170018F28E /* AddressListViewProtocol.swift in Sources */,
 				E0A1CEEF24E57FAE0018F28E /* AddressListConfiguratorProtocol.swift in Sources */,
 				E0A1CEB024E3F16E0018F28E /* UICollectionView+Extensions.swift in Sources */,
@@ -564,7 +604,7 @@
 				E0A1CEE524E55AA50018F28E /* CityListConfigurator.swift in Sources */,
 				E0A1CEE324E558B00018F28E /* CityListRouter.swift in Sources */,
 				E0A1CEED24E57F3D0018F28E /* AddressListInteractorProtocol.swift in Sources */,
-				E0A1CED724E50D4C0018F28E /* AddressService.swift in Sources */,
+				E0A1CED724E50D4C0018F28E /* CityService.swift in Sources */,
 				E0A1CECB24E426D50018F28E /* CityListRouterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

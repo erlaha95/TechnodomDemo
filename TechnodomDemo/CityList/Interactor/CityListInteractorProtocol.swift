@@ -11,5 +11,4 @@ protocol CityListInteractorProtocol: class {
     var presenter: CityListInteractorOutputProtocol! { get set }
     
     func loadAllCities()
-    func saveAddress(city: String, street: String, apartment: String)
 }
