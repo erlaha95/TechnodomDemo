@@ -185,8 +185,7 @@
 			children = (
 				E079AD8524E1588000C360AF /* AppDelegate.swift */,
 				E0A1CED824E50D700018F28E /* Common */,
-				E0A1CEB524E422B40018F28E /* CityList */,
-				E0A1CEA924E3F0840018F28E /* MainPage */,
+				E0A1CF0324E59EC00018F28E /* Modules */,
 				E079AD8E24E1588300C360AF /* Assets.xcassets */,
 				E079AD9024E1588300C360AF /* LaunchScreen.storyboard */,
 				E079AD9324E1588300C360AF /* Info.plist */,
@@ -203,19 +202,19 @@
 			path = TechnodomDemoTests;
 			sourceTree = "<group>";
 		};
-		E0A1CEA924E3F0840018F28E /* MainPage */ = {
+		E0A1CEA924E3F0840018F28E /* AddressList */ = {
 			isa = PBXGroup;
 			children = (
-				E0A1CEFA24E5910D0018F28E /* Service */,
 				E0A1CEAA24E3F0AF0018F28E /* View */,
 				E0A1CEB124E40D760018F28E /* Interactor */,
 				E0A1CEB224E40D800018F28E /* Presenter */,
 				E0A1CEAD24E3F0FC0018F28E /* Entity */,
 				E0A1CEE624E57D440018F28E /* Router */,
 				E0A1CEE724E57D4E0018F28E /* Configurator */,
+				E0A1CEFA24E5910D0018F28E /* Service */,
 				E079ADAE24E166BB00C360AF /* Main.storyboard */,
 			);
-			path = MainPage;
+			path = AddressList;
 			sourceTree = "<group>";
 		};
 		E0A1CEAA24E3F0AF0018F28E /* View */ = {
@@ -397,6 +396,15 @@
 				E0A1CEFD24E5913D0018F28E /* AddressService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		E0A1CF0324E59EC00018F28E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E0A1CEA924E3F0840018F28E /* AddressList */,
+				E0A1CEB524E422B40018F28E /* CityList */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
