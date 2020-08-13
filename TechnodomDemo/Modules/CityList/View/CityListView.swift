@@ -29,6 +29,12 @@ class CityListView: UICollectionReusableView {
         configurator.configure(with: self)
         
         presenter.loadCities()
+        setAddCellSelected()
+    }
+    
+    private func setAddCellSelected() {
+        let indexPath = IndexPath(item: 0, section: Section.add.rawValue)
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .left)
     }
     
     private func setupCollectionViewLayout() {
