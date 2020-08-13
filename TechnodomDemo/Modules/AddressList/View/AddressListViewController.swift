@@ -104,11 +104,10 @@ extension AddressListViewController: UICollectionViewDataSource {
         guard indexPath.section == 0 else { return UICollectionReusableView() }
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            let headerView = collectionView.dequeueReusableSupplementaryView(
+            let headerView: CityListView = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
-                withReuseIdentifier: "CityListView",
                 for: indexPath
-            ) as! CityListView
+            )
             return headerView
         default:
             return UICollectionReusableView()
