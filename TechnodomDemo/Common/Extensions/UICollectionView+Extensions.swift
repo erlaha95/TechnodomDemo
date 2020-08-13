@@ -20,4 +20,9 @@ extension UICollectionView {
         let reuseId = String(describing: T.self)
         return dequeueReusableCell(withReuseIdentifier: reuseId, for: indexPath) as! T
     }
+    
+    func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind kind: String, for indexPath: IndexPath) -> T {
+        let reuseId = String(describing: T.self)
+        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: reuseId, for: indexPath) as! T
+    }
 }
